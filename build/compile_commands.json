@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Channel.o -c /home/wang1664178416/Desktop/mymuduo/Channel.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Channel.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoop.o -c /home/wang1664178416/Desktop/mymuduo/EventLoop.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/EventLoop.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/InetAddress.o -c /home/wang1664178416/Desktop/mymuduo/InetAddress.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/InetAddress.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Logger.o -c /home/wang1664178416/Desktop/mymuduo/Logger.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Logger.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpServer.o -c /home/wang1664178416/Desktop/mymuduo/TcpServer.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/TcpServer.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Timestamp.o -c /home/wang1664178416/Desktop/mymuduo/Timestamp.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Timestamp.cpp"
+}
+]

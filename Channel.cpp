@@ -27,7 +27,7 @@ Channel::~Channel(){
 
 }
 
-//channel的tie方法什么时候调用过
+//channel的tie方法什么时候调用过?
 void Channel::tie(const std::shared_ptr<void>& obj){
     tie_ = obj;
     tied_ = true;

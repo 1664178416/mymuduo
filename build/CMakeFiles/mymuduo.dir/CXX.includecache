@@ -16,20 +16,18 @@ functional
 memory
 -
 
-/home/wang1664178416/Desktop/mymuduo/DefaultPoller.cpp
-Poller.h
-/home/wang1664178416/Desktop/mymuduo/Poller.h
-stdlib.h
--
-
 /home/wang1664178416/Desktop/mymuduo/EPollPoller.cpp
 EPollPoller.h
 /home/wang1664178416/Desktop/mymuduo/EPollPoller.h
 Logger.h
 /home/wang1664178416/Desktop/mymuduo/Logger.h
+Channel.h
+/home/wang1664178416/Desktop/mymuduo/Channel.h
 errno.h
 -
 unistd.h
+-
+string.h
 -
 
 /home/wang1664178416/Desktop/mymuduo/EPollPoller.h
@@ -45,12 +43,6 @@ string
 -
 noncopyable.h
 /home/wang1664178416/Desktop/mymuduo/noncopyable.h
-
-/home/wang1664178416/Desktop/mymuduo/Poller.cpp
-Poller.h
-/home/wang1664178416/Desktop/mymuduo/Poller.h
-Channel.h
-/home/wang1664178416/Desktop/mymuduo/Channel.h
 
 /home/wang1664178416/Desktop/mymuduo/Poller.h
 vector

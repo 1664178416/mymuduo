@@ -13,6 +13,7 @@ CMakeFiles/mymuduo.dir/DefaultPoller.o: ../Poller.h
 CMakeFiles/mymuduo.dir/DefaultPoller.o: ../Timestamp.h
 CMakeFiles/mymuduo.dir/DefaultPoller.o: ../noncopyable.h
 
+CMakeFiles/mymuduo.dir/EPollPoller.o: ../Channel.h
 CMakeFiles/mymuduo.dir/EPollPoller.o: ../EPollPoller.cpp
 CMakeFiles/mymuduo.dir/EPollPoller.o: ../EPollPoller.h
 CMakeFiles/mymuduo.dir/EPollPoller.o: ../Logger.h

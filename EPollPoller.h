@@ -6,6 +6,8 @@
 #include <sys/epoll.h>
 
 
+class Channel;
+
 /*
 epoll使用
 epoll_create
@@ -30,7 +32,7 @@ private:
     //填写活跃的连接
     void fillActiveChannels(int numEvents, ChannelList* activeChannels) const;
     //更新Channel通道
-    void update(int operation,Channel *Channel);
+    void update(int operation,Channel *channel);
 
     using EventList = std::vector<epoll_event>;
 

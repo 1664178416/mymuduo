@@ -15,6 +15,6 @@ namespace CurrentThread
             cacheTid();   
         }
         //如果后面不等于0了那么就会直接返回回去
-        return t_cachedTid;
+        return t_cacheTid;
     }
 }

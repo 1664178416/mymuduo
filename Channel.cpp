@@ -39,13 +39,13 @@ void Channel::update(){
 
     //通过Channel所属的EventLoop，调用epoller的相应方法，注册fd的events事件 
     //add code...
-    // loop_->updateChannel(this);
+    loop_->updateChannel(this);
 }
 
 //在channel所属的EventLoop中，把当前的channel删除
 void Channel::remove(){
     //add code
-    //loop_->removeChannel(this);
+    loop_->removeChannel(this);
 }
 
 void Channel::handleEvent(Timestamp receiveTime){

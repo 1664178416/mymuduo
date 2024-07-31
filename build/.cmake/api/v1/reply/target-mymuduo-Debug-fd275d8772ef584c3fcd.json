@@ -55,7 +55,10 @@
 				5,
 				6,
 				7,
-				8
+				8,
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -92,7 +95,10 @@
 				5,
 				6,
 				7,
-				8
+				8,
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -102,6 +108,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Channel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "CurrentThread.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -120,6 +132,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "EventLoop.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "EventLoopThread.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -144,6 +162,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "TcpServer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Thread.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

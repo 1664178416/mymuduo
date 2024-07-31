@@ -4,12 +4,17 @@
 CMakeFiles/mymuduo.dir/Channel.o
  /home/wang1664178416/Desktop/mymuduo/Channel.cpp
  /home/wang1664178416/Desktop/mymuduo/Channel.h
+ /home/wang1664178416/Desktop/mymuduo/CurrentThread.h
  /home/wang1664178416/Desktop/mymuduo/EventLoop.h
  /home/wang1664178416/Desktop/mymuduo/Logger.h
  /home/wang1664178416/Desktop/mymuduo/Timestamp.h
  /home/wang1664178416/Desktop/mymuduo/noncopyable.h
+CMakeFiles/mymuduo.dir/CurrentThread.o
+ /home/wang1664178416/Desktop/mymuduo/CurrentThread.cpp
+ /home/wang1664178416/Desktop/mymuduo/CurrentThread.h
 CMakeFiles/mymuduo.dir/DefaultPoller.o
  /home/wang1664178416/Desktop/mymuduo/DefaultPoller.cpp
+ /home/wang1664178416/Desktop/mymuduo/EPollPoller.h
  /home/wang1664178416/Desktop/mymuduo/Poller.h
  /home/wang1664178416/Desktop/mymuduo/Timestamp.h
  /home/wang1664178416/Desktop/mymuduo/noncopyable.h
@@ -22,7 +27,23 @@ CMakeFiles/mymuduo.dir/EPollPoller.o
  /home/wang1664178416/Desktop/mymuduo/Timestamp.h
  /home/wang1664178416/Desktop/mymuduo/noncopyable.h
 CMakeFiles/mymuduo.dir/EventLoop.o
+ /home/wang1664178416/Desktop/mymuduo/Channel.h
+ /home/wang1664178416/Desktop/mymuduo/CurrentThread.h
  /home/wang1664178416/Desktop/mymuduo/EventLoop.cpp
+ /home/wang1664178416/Desktop/mymuduo/EventLoop.h
+ /home/wang1664178416/Desktop/mymuduo/Logger.h
+ /home/wang1664178416/Desktop/mymuduo/Poller.h
+ /home/wang1664178416/Desktop/mymuduo/Timestamp.h
+ /home/wang1664178416/Desktop/mymuduo/noncopyable.h
+CMakeFiles/mymuduo.dir/EventLoopThread.o
+ /home/wang1664178416/Desktop/mymuduo/Channel.h
+ /home/wang1664178416/Desktop/mymuduo/CurrentThread.h
+ /home/wang1664178416/Desktop/mymuduo/EventLoop.h
+ /home/wang1664178416/Desktop/mymuduo/EventLoopThread.cpp
+ /home/wang1664178416/Desktop/mymuduo/EventLoopThread.h
+ /home/wang1664178416/Desktop/mymuduo/Thread.h
+ /home/wang1664178416/Desktop/mymuduo/Timestamp.h
+ /home/wang1664178416/Desktop/mymuduo/noncopyable.h
 CMakeFiles/mymuduo.dir/InetAddress.o
  /home/wang1664178416/Desktop/mymuduo/InetAddress.cpp
  /home/wang1664178416/Desktop/mymuduo/InetAddress.h
@@ -40,6 +61,11 @@ CMakeFiles/mymuduo.dir/Poller.o
 CMakeFiles/mymuduo.dir/TcpServer.o
  /home/wang1664178416/Desktop/mymuduo/TcpServer.cpp
  /home/wang1664178416/Desktop/mymuduo/TcpServer.h
+CMakeFiles/mymuduo.dir/Thread.o
+ /home/wang1664178416/Desktop/mymuduo/CurrentThread.h
+ /home/wang1664178416/Desktop/mymuduo/Thread.cpp
+ /home/wang1664178416/Desktop/mymuduo/Thread.h
+ /home/wang1664178416/Desktop/mymuduo/noncopyable.h
 CMakeFiles/mymuduo.dir/Timestamp.o
  /home/wang1664178416/Desktop/mymuduo/Timestamp.cpp
  /home/wang1664178416/Desktop/mymuduo/Timestamp.h

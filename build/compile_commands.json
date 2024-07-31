@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/CurrentThread.o -c /home/wang1664178416/Desktop/mymuduo/CurrentThread.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/CurrentThread.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
   "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/DefaultPoller.o -c /home/wang1664178416/Desktop/mymuduo/DefaultPoller.cpp",
   "file": "/home/wang1664178416/Desktop/mymuduo/DefaultPoller.cpp"
 },
@@ -18,6 +23,11 @@
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",
   "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoop.o -c /home/wang1664178416/Desktop/mymuduo/EventLoop.cpp",
   "file": "/home/wang1664178416/Desktop/mymuduo/EventLoop.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/EventLoopThread.o -c /home/wang1664178416/Desktop/mymuduo/EventLoopThread.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/EventLoopThread.cpp"
 },
 {
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",
@@ -38,6 +48,11 @@
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",
   "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpServer.o -c /home/wang1664178416/Desktop/mymuduo/TcpServer.cpp",
   "file": "/home/wang1664178416/Desktop/mymuduo/TcpServer.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Thread.o -c /home/wang1664178416/Desktop/mymuduo/Thread.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Thread.cpp"
 },
 {
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",

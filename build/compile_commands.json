@@ -1,6 +1,16 @@
 [
 {
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Acceptor.o -c /home/wang1664178416/Desktop/mymuduo/Acceptor.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Acceptor.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Buffer.o -c /home/wang1664178416/Desktop/mymuduo/Buffer.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Buffer.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
   "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Channel.o -c /home/wang1664178416/Desktop/mymuduo/Channel.cpp",
   "file": "/home/wang1664178416/Desktop/mymuduo/Channel.cpp"
 },
@@ -48,6 +58,16 @@
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",
   "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Poller.o -c /home/wang1664178416/Desktop/mymuduo/Poller.cpp",
   "file": "/home/wang1664178416/Desktop/mymuduo/Poller.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/Socket.o -c /home/wang1664178416/Desktop/mymuduo/Socket.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/Socket.cpp"
+},
+{
+  "directory": "/home/wang1664178416/Desktop/mymuduo/build",
+  "command": "/usr/bin/c++  -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC   -o CMakeFiles/mymuduo.dir/TcpConnection.o -c /home/wang1664178416/Desktop/mymuduo/TcpConnection.cpp",
+  "file": "/home/wang1664178416/Desktop/mymuduo/TcpConnection.cpp"
 },
 {
   "directory": "/home/wang1664178416/Desktop/mymuduo/build",

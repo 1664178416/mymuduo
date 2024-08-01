@@ -124,6 +124,36 @@ mymuduo/fast:
 .PHONY : mymuduo/fast
 
 # target to build an object file
+Acceptor.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Acceptor.o
+.PHONY : Acceptor.o
+
+# target to preprocess a source file
+Acceptor.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Acceptor.i
+.PHONY : Acceptor.i
+
+# target to generate assembly for a file
+Acceptor.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Acceptor.s
+.PHONY : Acceptor.s
+
+# target to build an object file
+Buffer.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Buffer.o
+.PHONY : Buffer.o
+
+# target to preprocess a source file
+Buffer.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Buffer.i
+.PHONY : Buffer.i
+
+# target to generate assembly for a file
+Buffer.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Buffer.s
+.PHONY : Buffer.s
+
+# target to build an object file
 Channel.o:
 	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Channel.o
 .PHONY : Channel.o
@@ -274,6 +304,36 @@ Poller.s:
 .PHONY : Poller.s
 
 # target to build an object file
+Socket.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Socket.o
+.PHONY : Socket.o
+
+# target to preprocess a source file
+Socket.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Socket.i
+.PHONY : Socket.i
+
+# target to generate assembly for a file
+Socket.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/Socket.s
+.PHONY : Socket.s
+
+# target to build an object file
+TcpConnection.o:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TcpConnection.o
+.PHONY : TcpConnection.o
+
+# target to preprocess a source file
+TcpConnection.i:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TcpConnection.i
+.PHONY : TcpConnection.i
+
+# target to generate assembly for a file
+TcpConnection.s:
+	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TcpConnection.s
+.PHONY : TcpConnection.s
+
+# target to build an object file
 TcpServer.o:
 	$(MAKE) -f CMakeFiles/mymuduo.dir/build.make CMakeFiles/mymuduo.dir/TcpServer.o
 .PHONY : TcpServer.o
@@ -327,6 +387,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... mymuduo"
+	@echo "... Acceptor.o"
+	@echo "... Acceptor.i"
+	@echo "... Acceptor.s"
+	@echo "... Buffer.o"
+	@echo "... Buffer.i"
+	@echo "... Buffer.s"
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
@@ -357,6 +423,12 @@ help:
 	@echo "... Poller.o"
 	@echo "... Poller.i"
 	@echo "... Poller.s"
+	@echo "... Socket.o"
+	@echo "... Socket.i"
+	@echo "... Socket.s"
+	@echo "... TcpConnection.o"
+	@echo "... TcpConnection.i"
+	@echo "... TcpConnection.s"
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"

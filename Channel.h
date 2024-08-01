@@ -48,7 +48,7 @@ public:
     int events() const { return events_; }
     //设置在fd上真正发生的事件
     //void set_revents(int revt) { revents_ = revt; }
-    int set_revents(int revt) { revents_ = revt; }
+    int set_revents(int revt) { revents_ = revt; return revt; }
     
     //设置fd相应的事件状态
     //epoll_creat,epoll_ctl,epoll_wait

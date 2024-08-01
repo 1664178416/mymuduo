@@ -6,21 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/wang1664178416/Desktop/mymuduo/InetAddress.cpp
-InetAddress.h
-/home/wang1664178416/Desktop/mymuduo/InetAddress.h
-strings.h
+/home/wang1664178416/Desktop/mymuduo/Buffer.cpp
+Buffer.h
+/home/wang1664178416/Desktop/mymuduo/Buffer.h
+errno.h
 -
-string.h
--
-iostream
+sys/uio.h
 -
 
-/home/wang1664178416/Desktop/mymuduo/InetAddress.h
-netinet/in.h
--
-arpa/inet.h
--
+/home/wang1664178416/Desktop/mymuduo/Buffer.h
 string
+-
+vector
 -
 

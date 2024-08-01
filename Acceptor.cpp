@@ -21,7 +21,7 @@ static int createNonblockingOrDie()
     return sockfd;
 }
 
-Acceptor::Acceptor(EventLoop   *loop, const InetAddress &listenAddr)
+Acceptor::Acceptor(EventLoop   *loop, const InetAddress &listenAddr,bool reuseport)
     : loop_(loop),
       acceptSocket_(createNonblockingOrDie()),
       acceptChannel_(loop, acceptSocket_.fd()),

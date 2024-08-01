@@ -2,9 +2,10 @@
 
 #include <errno.h>
 #include <sys/uio.h> // Include the appropriate header file for "iovec" type
+#include <unistd.h> // Include the appropriate header file for "write" function
 
 /*
- 
+
 */
 
 ssize_t Buffer::readFd(int fd,int* savedErrno){
@@ -32,5 +33,13 @@ ssize_t Buffer::readFd(int fd,int* savedErrno){
         append(extrabuf,n - writable);  //writerIndex_开始写n - writable大小的数据
     }
 
+    return n;
+}
+
+ssize_t Buffer::writeFd(int fd,int* savedErrno){
+    //已经读取的数据,readableBytes()返回的是readerIndex_到writerIndex_之间的数据大小,peek()返回的是readerIndex_到writerIndex_之间的数据
+    ssize_t n = ::write(fd,peak(),readableBytes());  //往fd上写数据
+    if(n < 0)
+        *savedErrno = errno;
     return n;
 }

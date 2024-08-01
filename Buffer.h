@@ -52,8 +52,21 @@ public:
         return begin() + writerIndex_;
     }
 
+    //复位操作
+    void retrieve(size_t len){
+        if(len < readableBytes()){
+            readerIndex_ += len;  //应用只读取了可读缓冲区的一部分
+        }
+        else{
+            //如果读完了，重新复位
+            retrieveAll();
+        }
+    }
+
     //从fd上读取数据
     ssize_t readFd(int fd,int* savedErrno);
+    //往fd上写数据
+    ssize_t writeFd(int fd,int* savedErrno);
 private:
 
     char* begin(){
@@ -68,16 +81,7 @@ private:
         return begin() + readerIndex_;
     }
 
-    //复位操作
-    void retrieve(size_t len){
-        if(len < readableBytes()){
-            readerIndex_ += len;  //应用只读取了可读缓冲区的一部分
-        }
-        else{
-            //如果读完了，重新复位
-            retrieveAll();
-        }
-    }
+    
     void retrieveAll(){
         //重新复位
         readerIndex_ = writerIndex_ = kCheapPrepend;

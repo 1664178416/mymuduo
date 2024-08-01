@@ -37,9 +37,8 @@ public:
     const InetAddress& peerAddress() const { return peerAddr_; }
 
     bool connected() const { return state_ == kConnected; }
-    //发送数据
-    void send(const void* message,size_t len);
-    //关闭连接
+    
+    void send(const std::string &buf);
     void shutdown();
 
     void setConnectionCallback(const ConnectionCallback& cb)
@@ -55,16 +54,21 @@ public:
 
     void connectEstablished();  //连接建立
     void connectDestroyed();  //连接销毁
+
+    
 private:
     //已经断开，正在断开，已经连接，正在连接
     enum StateE {kDisconnected,kConnecting,kConnected,kDisconnecting};
-
+    void setState(StateE s) { state_ = s; }
     void handleRead(Timestamp receiveTime);
     void handleWrite();
     void handleClose();
     void handleError();
 
+    
     void sendInLoop(const void* message,size_t len);    
+
+    
     void shutdownInLoop();
 
     EventLoop* loop_;  //这里绝对不是baseloop，因为TcpConnection是在subloop中管理和创建的
@@ -85,6 +89,6 @@ private:
     HighWaterMarkCallback highWaterMarkCallback_; //高水位回调函数
     size_t highWaterMark_;
 
-    Buffer inputBuffer_;  //输入缓冲区
-    Buffer outputBuffer_;  //输出缓冲区
+    Buffer inputBuffer_;  //接收数据的缓冲区
+    Buffer outputBuffer_;  //发送数据的缓冲区
 };

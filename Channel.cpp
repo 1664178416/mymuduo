@@ -28,6 +28,7 @@ Channel::~Channel(){
 }
 
 //channel的tie方法什么时候调用过?
+//TcpConnection => channel ，两者需要进行绑定 channel中的tie_对应上头的TcpConnection
 void Channel::tie(const std::shared_ptr<void>& obj){
     tie_ = obj;
     tied_ = true;

@@ -132,7 +132,7 @@ void EventLoop::handleRead(){
     ssize_t n = read(wakeupFd_, &one, sizeof one);  //读取wakeupfd
     if(n != sizeof one){
         //LOG_ERROR << "EventLoop::handleRead() reads " << n << " bytes instead of 8";
-        LOG_ERROR("EventLoop::handleRead() reads %d bytes instead of 8 \n", n);
+        LOG_ERROR("EventLoop::handleRead() reads %zu bytes instead of 8 \n", n);
     }
 }
 
@@ -142,7 +142,7 @@ void EventLoop::wakeup(){
     ssize_t n = write(wakeupFd_, &one, sizeof one);  //向wakeupfd_写一个数据,用于唤醒loop所在线程
     if(n != sizeof one){
         //LOG_ERROR << "EventLoop::wakeup() writes " << n << " bytes instead of 8";
-        LOG_ERROR("EventLoop::wakeup() writes %d bytes instead of 8 \n", n);
+        LOG_ERROR("EventLoop::wakeup() writes %zu bytes instead of 8 \n", n);
     }
 }
 

@@ -41,6 +41,7 @@ EventLoopThreadPool::EventLoopThreadPool(EventLoop *baseloop,const std::string &
             if(next_ >= loops_.size())
                 next_ = 0;
         }
+        return loop;
     }
 
     std::vector<EventLoop*> EventLoopThreadPool::getAllLoops()

@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/wang1664178416/Desktop/mymuduo/CurrentThread.h
-unistd.h
--
-sys/syscall.h
--
-
 /home/wang1664178416/Desktop/mymuduo/InetAddress.cpp
 InetAddress.h
 /home/wang1664178416/Desktop/mymuduo/InetAddress.h
@@ -29,32 +23,4 @@ arpa/inet.h
 -
 string
 -
-
-/home/wang1664178416/Desktop/mymuduo/Thread.cpp
-Thread.h
-/home/wang1664178416/Desktop/mymuduo/Thread.h
-CurrentThread.h
-/home/wang1664178416/Desktop/mymuduo/CurrentThread.h
-semaphore.h
--
-
-/home/wang1664178416/Desktop/mymuduo/Thread.h
-noncopyable.h
-/home/wang1664178416/Desktop/mymuduo/noncopyable.h
-iostream
--
-functional
--
-thread
--
-memory
--
-unistd.h
--
-string
--
-atomic
--
-
-/home/wang1664178416/Desktop/mymuduo/noncopyable.h
 

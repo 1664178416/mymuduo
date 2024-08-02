@@ -11,7 +11,9 @@
 #include "InetAddress.h"
 #include "Logger.h"
 #include "Callbacks.h"
-
+#include "Logger.h"
+#include "TcpConnection.h"
+#include "Buffer.h" 
 
 #include <functional>
 #include <memory>
@@ -20,7 +22,7 @@
 
 
 //对外的服务器编程使用的类
-class TcpServer
+class TcpServer : noncopyable
 {
 public:
     

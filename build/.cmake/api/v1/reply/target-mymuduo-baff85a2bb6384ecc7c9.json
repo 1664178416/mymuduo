@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : " -g -std=c++11 -fPIC -g -fPIC  "
+					"fragment" : " -g -std=c++11 -fPIC -fPIC  "
 				}
 			],
 			"defines" : 

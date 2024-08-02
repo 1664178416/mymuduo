@@ -64,7 +64,7 @@ private:
     ChannelList activeChannels_; //当前poller返回的活跃的channel列表
    // Channel* currentActiveChannel_; //当前正在处理的channel
 
-    std::atomic_bool eventHandling_; //原子操作，通过CAS实现,标识当前是否有回调事件
+    // std::atomic_bool eventHandling_; //原子操作，通过CAS实现,标识当前是否有回调事件
     std::vector<Functor> pendingFunctors_; //存放loop所有需要执行的回调操作
     std::mutex mutex_; //互斥锁，用于保护pendingFunctors_的操作
 };

@@ -7,7 +7,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netinet/tcp.h> // Add this line to include the header file that defines "TCP_NODELAY"
-#include <string.h>
+#include <strings.h>
 
 
 Socket::~Socket(){
@@ -26,14 +26,18 @@ void Socket::listen()
     }
 }
 int Socket::accept(InetAddress *peeraddr){
+
+    /*
+    1.accept函数参数不合法
+    2.对返回connfd没有设置非阻塞
+    */
+
     sockaddr_in addr;
     bzero(&addr,sizeof(addr));
-    socklen_t len;
-    int connfd = ::accept(sockfd_,(sockaddr*)&addr,&len);
+    socklen_t len = sizeof addr;  //1.accept函数参数不合法
+    int connfd = ::accept4(sockfd_,(sockaddr*)&addr,&len,SOCK_NONBLOCK | SOCK_CLOEXEC);  //SOCK_CLOEXEC 是一个用于 accept4 系统调用的标志，它的作用是在执行 exec 系列函数（如 execve）时自动关闭文件描述符
     if(connfd >= 0){
         peeraddr->setSockAddr(addr);
-    }else{
-        LOG_ERROR("Socket::accept %d fail \n",sockfd_);
     }
     return connfd;
 }
@@ -46,20 +50,20 @@ void Socket::shutdownWrite(){
 void Socket::setTcpNoDelay(bool on)  //设置TCP_NODELAY选项，禁用Nagle算法，不缓冲数据
 {
     int optval = on ? 1 : 0;
-    ::setsockopt(sockfd_,IPPROTO_TCP,TCP_NODELAY,&optval,static_cast<socklen_t>(sizeof optval));
+    ::setsockopt(sockfd_,IPPROTO_TCP,TCP_NODELAY,&optval,sizeof optval);
 }
 void Socket::setReuseAddr(bool on)   //设置SO_REUSEADDR选项，允许重用本地地址和端口
 {
     int optval = on ? 1 : 0;
-    ::setsockopt(sockfd_,SOL_SOCKET,SO_REUSEADDR,&optval,static_cast<socklen_t>(sizeof optval));
+    ::setsockopt(sockfd_,SOL_SOCKET,SO_REUSEADDR,&optval,sizeof optval);
 }
 void Socket::setReusePort(bool on)  //设置SO_REUSEPORT选项，允许多个进程或线程绑定同一个口号
 {
     int optval = on ? 1 : 0;
-    ::setsockopt(sockfd_,SOL_SOCKET,SO_REUSEPORT,&optval,static_cast<socklen_t>(sizeof optval));
+    ::setsockopt(sockfd_,SOL_SOCKET,SO_REUSEPORT,&optval,sizeof optval);
 }
 void Socket::setKeepAlive(bool on)   //设置SO_KEEPALIVE选项，保活机制，探测空闲连接
 {
     int optval = on ? 1 : 0;
-    ::setsockopt(sockfd_,SOL_SOCKET,SO_KEEPALIVE,&optval,static_cast<socklen_t>(sizeof optval));
+    ::setsockopt(sockfd_,SOL_SOCKET,SO_KEEPALIVE,&optval,sizeof optval);
 }

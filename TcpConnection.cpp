@@ -12,9 +12,10 @@
 #include<strings.h>
 #include<netinet/tcp.h>
 #include<sys/socket.h>
+#include<string>
 
 
-EventLoop* CheckLoopNotNull(EventLoop* loop)
+EventLoop* CheckLoopNotNull_Connection(EventLoop* loop)
 {
     if(loop == nullptr)
     {
@@ -29,7 +30,7 @@ TcpConnection::TcpConnection(EventLoop* loop,
                   int sockfd,
                   const InetAddress& localAddr,
                   const InetAddress& peerAddr)
-    :loop_(CheckLoopNotNull(loop)),
+    :loop_(CheckLoopNotNull_Connection(loop)),
     name_(name),
     state_(kConnecting),
     reading_(true),
@@ -167,7 +168,6 @@ void TcpConnection::handleWrite(){
 }
 void TcpConnection::handleClose(){
     LOG_INFO("fd = %d state = %d\n",channel_->fd(),(int)state_);
-    setState(kDisconnected);
     setState(kDisconnected);
     channel_->disableAll();
 

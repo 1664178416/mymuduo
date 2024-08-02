@@ -2,6 +2,7 @@
 
 #include<string>
 #include <vector>
+#include <algorithm>  //copy函数
 
 //网络库底层的缓冲区类型定义
 
@@ -67,25 +68,6 @@ public:
     ssize_t readFd(int fd,int* savedErrno);
     //往fd上写数据
     ssize_t writeFd(int fd,int* savedErrno);
-private:
-
-    char* begin(){
-        //首先调用了迭代器的operator*()方法，获得底层vector第0号位元素，然后再用&取地址，数组的起始地址
-        return &*buffer_.begin();
-    }
-    const char* begin() const{
-        return &*buffer_.begin();
-    }
-    //返回缓冲区中可读数据的起始地址
-    const char* peak() const {
-        return begin() + readerIndex_;
-    }
-
-    
-    void retrieveAll(){
-        //重新复位
-        readerIndex_ = writerIndex_ = kCheapPrepend;
-    }
 
     //把onMessage函数上报的buffer数据转成string类型的数据返回
     std::string retrieveAllAsString(){
@@ -97,6 +79,29 @@ private:
         retrieve(len); //把读过的数据清空,读走了，那么readerIndex_也要往后移动
         return result;
     }
+    void retrieveAll(){
+        //重新复位
+        readerIndex_ = writerIndex_ = kCheapPrepend;
+    }
+    const char* peak() const {
+        return begin() + readerIndex_;
+    }
+private:
+
+    char* begin(){
+        //首先调用了迭代器的operator*()方法，获得底层vector第0号位元素，然后再用&取地址，数组的起始地址
+        return &*buffer_.begin();
+    }
+    const char* begin() const{
+        return &*buffer_.begin();
+    }
+    //返回缓冲区中可读数据的起始地址
+
+
+    
+
+
+    
 
     void makeSpace(size_t len){
         //如果可写区域加上前面空闲区域小于len+预留，扩容

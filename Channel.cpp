@@ -51,7 +51,7 @@ void Channel::remove(){
 
 void Channel::handleEvent(Timestamp receiveTime){
 
-    LOG_INFO("channel handleEvent revents:%d", revents_);
+    
 
     if(tied_){
         std::shared_ptr<void> guard = tie_.lock();
@@ -67,6 +67,7 @@ void Channel::handleEvent(Timestamp receiveTime){
 //根据poller监听的channel发生的具体事件，由channel调用相应的回调函数
 void Channel::handleEventWithGuard(Timestamp receiveTime){
     //被挂断同时不可读
+    LOG_INFO("channel handleEvent revents:%d", revents_);
     if((revents_ & EPOLLHUP) && !(revents_ & EPOLLIN)){
         if(closeCallback_) closeCallback_();
     }

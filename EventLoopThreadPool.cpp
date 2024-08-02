@@ -1,6 +1,8 @@
 #include "EventLoopThreadPool.h"
 #include "EventLoopThread.h"
 
+#include<memory>
+
 EventLoopThreadPool::EventLoopThreadPool(EventLoop *baseloop,const std::string &nameArg)
     :baseloop_(baseloop),
     name_(nameArg),
@@ -48,5 +50,6 @@ EventLoopThreadPool::EventLoopThreadPool(EventLoop *baseloop,const std::string &
     {
         if(loops_.empty())
             return std::vector<EventLoop*>(1,baseloop_);
-        return loops_;
+        else
+            return loops_;
     }

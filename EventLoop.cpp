@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <memory>
+#include <errno.h>
 
 //防止一个线程创建多个EventLoop  thread_local
 
@@ -104,7 +105,7 @@ void EventLoop::runInLoop(Functor cb){
     if(isInLoopThread()){  //在当前的loop线程中，执行cb
         cb();
     }else{   //在非当前loop线程执行cb，就需要唤醒loop线程，执行cb
-        queueInLoop(std::move(cb));
+        queueInLoop(cb);
     }
 }
 
@@ -132,7 +133,7 @@ void EventLoop::handleRead(){
     ssize_t n = read(wakeupFd_, &one, sizeof one);  //读取wakeupfd
     if(n != sizeof one){
         //LOG_ERROR << "EventLoop::handleRead() reads " << n << " bytes instead of 8";
-        LOG_ERROR("EventLoop::handleRead() reads %zu bytes instead of 8 \n", n);
+        LOG_ERROR("EventLoop::handleRead() reads %lu bytes instead of 8 \n", n);
     }
 }
 
@@ -142,7 +143,7 @@ void EventLoop::wakeup(){
     ssize_t n = write(wakeupFd_, &one, sizeof one);  //向wakeupfd_写一个数据,用于唤醒loop所在线程
     if(n != sizeof one){
         //LOG_ERROR << "EventLoop::wakeup() writes " << n << " bytes instead of 8";
-        LOG_ERROR("EventLoop::wakeup() writes %zu bytes instead of 8 \n", n);
+        LOG_ERROR("EventLoop::wakeup() writes %lu bytes instead of 8 \n", n);
     }
 }
 

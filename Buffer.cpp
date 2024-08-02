@@ -37,7 +37,7 @@ ssize_t Buffer::readFd(int fd,int* savedErrno){
 }
 
 ssize_t Buffer::writeFd(int fd,int* savedErrno){
-    //已经读取的数据,readableBytes()返回的是readerIndex_到writerIndex_之间的数据大小,peek()返回的是readerIndex_到writerIndex_之间的数据
+    //已经读取的数据,readableBytes()返回的是readerIndex_到writerIndex_之间的数据大小,peak()返回的是readerIndex_到writerIndex_之间的数据
     ssize_t n = ::write(fd,peak(),readableBytes());  //往fd上写数据
     if(n < 0)
         *savedErrno = errno;

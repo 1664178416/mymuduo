@@ -25,11 +25,11 @@ std::string InetAddress::toIp() const {
 std::string InetAddress::toIpPort() const {
     char buf[64] = {0};
     //inet_ntop函数将网络字节序的32位整数转换为点分十进制格式的IP地址字符串
-    inet_ntop(AF_INET,&addr_.sin_addr,buf,sizeof(buf));
+    ::inet_ntop(AF_INET,&addr_.sin_addr,buf,sizeof(buf));
     int end = strlen(buf);
     //ntohs函数将网络字节序的16位整数转换为主机字节序的16位整数
     uint16_t port = ntohs(addr_.sin_port);
-    snprintf(buf+end,sizeof(buf)-end,":%u",port);
+    sprintf(buf+end,":%u",port);
     return buf;
 }
 
@@ -38,11 +38,11 @@ uint16_t InetAddress::toPort() const {
     return ntohs(addr_.sin_port);
 }
 
-#include<iostream>
-int main(){
-    InetAddress addr(8080);
-    std::cout << addr.toIpPort() << std::endl;
-    std::cout << addr.toPort() << std::endl;
-    std::cout << addr.toIp() << std::endl;
-    return 0;
-}
+// #include<iostream>
+// int main(){
+//     InetAddress addr(8080);
+//     std::cout << addr.toIpPort() << std::endl;
+//     std::cout << addr.toPort() << std::endl;
+//     std::cout << addr.toIp() << std::endl;
+//     return 0;
+// }

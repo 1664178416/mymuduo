@@ -18,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "mymuduo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mymuduo-baff85a2bb6384ecc7c9.json",
+					"jsonFile" : "target-mymuduo-Debug-805998741b75b2bb1ecb.json",
 					"name" : "mymuduo",
 					"projectIndex" : 0
 				}
